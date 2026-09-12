@@ -24,11 +24,15 @@
     .clan-switcher button{width:34px;border:1px solid #d1a05a;border-radius:6px;background:transparent;color:#edc27f;cursor:pointer;font-size:18px}
     [hidden]{display:none!important}
   </style>
-  <title>Gia Phả Việt — Bản Một Dòng họ</title>
+  <title>Gia Phả Việt</title>
 </head>
 <body>
   <aside class="sidebar">
     <div class="brand"><div class="seal">家</div><div><strong>GIA PHẢ VIỆT</strong><small>Gia phả dòng họ</small></div></div>
+    <div class="clan-switcher">
+      <label for="clanSwitcher">DÒNG HỌ ĐANG MỞ</label>
+      <div><select id="clanSwitcher" aria-label="Chọn dòng họ"></select><button id="newClanBtn" title="Tạo gia phả mới">＋</button></div>
+    </div>
     <nav id="nav">
       <button data-view="dashboard" class="active">⌂ <span>Tổng quan</span></button>
       <button data-view="tree">⌘ <span>Cây gia phả</span></button>
@@ -112,6 +116,9 @@
 
   <dialog id="detailDialog"><div id="detailContent"></div></dialog>
   <input type="file" id="restoreInput" accept=".json,.ged,.gedcom,.csv" hidden />
+  <script src="libs/html2canvas.min.js"></script>
+  <script src="libs/jspdf.umd.min.js"></script>
+  <script src="libs/html-docx.js"></script>
   <script src="app.js?v=48"></script>
 </body>
 </html>
